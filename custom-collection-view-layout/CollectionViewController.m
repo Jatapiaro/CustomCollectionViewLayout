@@ -20,8 +20,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    CollectionViewCustomLayout *layout = [[CollectionViewCustomLayout alloc] init];
-    _collectionView.collectionViewLayout = layout;
 }
 
 - (void)awakeFromNib
@@ -31,6 +29,8 @@
 
 - (void)_configureCollectionView
 {
+    CollectionViewCustomLayout *layout = [[CollectionViewCustomLayout alloc] init];
+    _collectionView.collectionViewLayout = layout;
     _collectionView.backgroundColors = @[ NSColor.purpleColor ];
     [_collectionView registerClass:FirstCollectionViewItem.class forItemWithIdentifier:@"FirstCollectionViewItem"];
 }

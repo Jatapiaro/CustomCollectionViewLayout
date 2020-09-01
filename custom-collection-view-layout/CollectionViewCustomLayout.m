@@ -13,9 +13,8 @@
 
 - (instancetype)init
 {
-    if (self = [super init]) {
+    if (self = [super init])
         _itemHeight = 100;
-    }
 
     return self;
 }
@@ -51,7 +50,7 @@
 
     for (NSInteger i = 0; i < numberOfItems; i++) {
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:i inSection:0];
-        NSCollectionViewLayoutAttributes *itemAttributes = [NSCollectionViewLayoutAttributes layoutAttributesForItemWithIndexPath:indexPath];
+        NSCollectionViewLayoutAttributes *itemAttributes = [self layoutAttributesForItemAtIndexPath:indexPath];
 
         if (itemAttributes)
             [attributes addObject:itemAttributes];
